@@ -7,6 +7,8 @@ namespace DecoratorPatternExample.DecoratorPattern
         {
         }
 
+        public override string PathMessage => " EmailPath";
+
         public override string SendMessage()
         {
             // Do something to send the message through Email

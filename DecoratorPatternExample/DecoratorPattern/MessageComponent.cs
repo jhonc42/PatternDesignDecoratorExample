@@ -3,6 +3,8 @@ namespace DecoratorPatternExample.DecoratorPattern
 {
     public abstract class MessageComponent
     {
+        public abstract string PathMessage { get; }
+
         public MessageComponent()
         {
         }

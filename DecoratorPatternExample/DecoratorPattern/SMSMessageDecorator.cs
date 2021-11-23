@@ -7,6 +7,8 @@ namespace DecoratorPatternExample.DecoratorPattern
         {
         }
 
+        public override string PathMessage => _component.PathMessage + " SMSPath";
+
         public override string SendMessage()
         {
             // Do something to send the message trhough SMS

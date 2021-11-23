@@ -28,10 +28,10 @@ namespace DecoratorPatternExample.Controllers
             //sendEmail.SendMessage();
             sendEmail = new SMSMessageDecorator(sendEmail);
             //sendEmail.SendMessage();
-            //sendEmail = new SlackMessageDecorator(sendEmail);
+            sendEmail = new SlackMessageDecorator(sendEmail);
             sendEmail = new FacebookMessageDecorator(sendEmail);
 
-            var result = sendEmail.SendMessage();
+            var result = sendEmail.SendMessage() + sendEmail.PathMessage;
             return Ok(result);
         }
     }
